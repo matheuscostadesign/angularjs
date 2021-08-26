@@ -1,0 +1,22 @@
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 500px;
+  margin-top: 3rem;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.dados {
+  padding: 1rem;
+  background-color: #24292e;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 4px;
+  height: auto;
+}
