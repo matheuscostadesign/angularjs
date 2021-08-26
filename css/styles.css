@@ -1,22 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&display=swap");
+
+body {
+  background-color: #1e1e1e;
+  color: #e2e2e2;
+  font-family: "Epilogue", sans-serif;
+}
+
+html {
+  font-size: 95%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+hr {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+a {
+  color: #bb86fc;
+}
+
 .center {
   text-align: center;
   margin: 0 auto;
+  color: #bb86fc;
 }
 
 .container {
   max-width: 500px;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
-.btn-primary {
+.btn-default {
   width: 100%;
+  background-color: #bb86fc;
+  box-shadow: none;
+}
+
+.btn-default:hover {
+  background-color: #bb86fc;
 }
 
 .dados {
   padding: 1rem;
-  background-color: #24292e;
+  background-color: #121212;
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBM Plex Mono", monospace;
   border-radius: 4px;
-  height: auto;
+  margin-bottom: 2rem;
+  overflow: auto;
+}
+
+.form-control {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #bb86fc;
+}
+
+.form-control:focus {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #bb86fc;
+  outline: none;
+  box-shadow: none;
 }
