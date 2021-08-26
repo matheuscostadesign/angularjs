@@ -45,7 +45,16 @@ a {
   background-color: #bb86fc;
 }
 
-.dados {
+.dadosAPI {
+  margin-top: 2rem;
+}
+
+.dadosAPI input {
+  color: #bb86fc;
+  padding-left: 0;
+}
+
+.dadosJSON {
   padding: 1rem;
   background-color: #121212;
   color: #fff;
@@ -67,4 +76,18 @@ a {
   border: 2px solid #bb86fc;
   outline: none;
   box-shadow: none;
+}
+
+.form-control:disabled {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #bb86fc;
+  border-radius: 0;
+  margin-bottom: 0.5rem;
+}
+
+.uf {
+  display: inline-block;
+  margin-left: 2rem;
+  float: right;
 }

@@ -20,7 +20,7 @@
     <br>
     <div class="row">
       <div class="col-12">
-        <h3>Seja bem-vindo, {{nomePessoa}} 🤟</h3>
+        <h4>Seja bem-vindo, {{nomePessoa}} 🤟</h4>
       </div>
     </div>
     <br>
@@ -33,28 +33,34 @@
     <br>
     <div class="row">
       <div class="col-12">
-        <label for="cep">Qual é o seu CEP?</label>
-        <input placeholder="Digite seu CEP" id="cep" type="text" class="form-control"><br>
-        <button id="buscarCEP" type="submit" class="btn btn-default">Buscar CEP</button><br><br>
-        <div class="dados">
-          <blockquote id="cepJSON">CEP...</blockquote>
+        <label for="cep">Qual é o seu CEP? </label><small> (sem pontos ou traços)</small>
+        <input name="cep" placeholder="Digite seu CEP" id="cep" type="text" class="form-control" value="" size="10"
+          required maxlength="9" onblur="pesquisacep(this.value);"><br>
+        <button id="buscarCEP" class="btn btn-default">Buscar CEP</button>
+        <div class="dadosAPI">
+          <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" class="form-control" disabled></label>
+          <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" class="form-control" disabled></label>
+          <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" class="form-control" disabled></label>
+          <div class="uf">
+            <label>Estado:
+              <input name="uf" type="text" id="uf" size="2" class="form-control" disabled></label>
+          </div>
+          <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8" class="form-control" disabled></label><br><br>
+          <h6>Retorno em JSON</h6>
+        </div>
+        <div class="dadosJSON">
+          <blockquote id="cepJSON">...</blockquote>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    document.getElementById('buscarCEP').addEventListener('click', () => {
-      const cep = document.getElementById('cep').value;
-      fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then((data) => data.json())
-        .then((data) => {
-          document.getElementById('cepJSON').innerHTML = JSON.stringify(data);
-        });
-    });
-  </script>
-
-  <!-- AngularJS -->
+  <!-- Scripts -->
+  <script src="scripts/scripts.js"></script>
   <script src="scripts/angular.min.js" defer></script>
 </body>
 
